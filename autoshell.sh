@@ -18,12 +18,12 @@ tasks=(
 for (( i=1; i<=365; i++ )); do
     # Determine if it's a commit day or not (60% chance of a commit)
     commit_day=$((RANDOM % 10))
-    if [ $commit_day -lt 6 ]; then
+    if [ $commit_day -lt 12 ]; then
         # Determine the number of commits for this day
         num_commits=1
         # On random days, make more than one commit
         if [ $((RANDOM % 5)) -eq 0 ]; then
-            num_commits=$((RANDOM % 6 + 13))  # Make 2 or 3 commits
+            num_commits=$((RANDOM % 2 + 1))  # Make 2 or 3 commits
         fi
 
         # Loop to make multiple commits
