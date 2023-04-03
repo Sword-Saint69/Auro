@@ -1,2 +1,2 @@
 Task 5: Writing a random number
-650
+1825
